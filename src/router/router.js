@@ -16,10 +16,7 @@ const TabNavigator = createBottomTabNavigator(
       screen: HomeScreen,
       navigationOptions: {
         tabBarIcon: ({tintColor}) => <Icon name="md-flask" size={30} color={tintColor} />,
-
       },
-      
-  
     },
     PicsScreen: {
       screen: PicsScreen,
