@@ -17,7 +17,7 @@ class ProfileScreen extends React.Component {
     return (
       <View style={S.container}>
         <HeaderTitle title="Profile" />
-        <Text onPress={() => this.props.navigation.navigate('Screen1')} h1 italic>Ariana Careta</Text>
+        <Text onPress={() => this.props.navigation.navigate('Screen1')} h1 italic>Gordo gay</Text>
       </View>
     );
   }
