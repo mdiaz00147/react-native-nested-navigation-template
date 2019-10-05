@@ -1,5 +1,6 @@
 import React from "react";
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
+import Icon from 'react-native-vector-icons/Ionicons';
 
 const S = StyleSheet.create({
   container: { flexDirection: "row", height: 80, elevation: 2, backgroundColor: '#283e4a' },
@@ -20,7 +21,6 @@ const TabBar = props => {
   } = props;
 
   const { routes, index: activeRouteIndex } = navigation.state;
-
   return (
     <View style={S.container}>
       {routes.map((route, routeIndex) => {
@@ -39,8 +39,8 @@ const TabBar = props => {
             }}
             accessibilityLabel={getAccessibilityLabel({ route })}
           >
-            {renderIcon({ route, focused: isRouteActive, tintColor })}
-            <Text style={S.tabText}>{getLabelText({ route })}</Text>
+            {renderIcon({ route, focused: isRouteActive, tintColor: tintColor })}
+            <Text style={{ color: tintColor }} >{getLabelText({ route })}</Text>
           </TouchableOpacity>
         );
       })}
