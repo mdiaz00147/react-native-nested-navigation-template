@@ -3,9 +3,8 @@ import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
 import Icon from 'react-native-vector-icons/Ionicons';
 
 const S = StyleSheet.create({
-  container: { flexDirection: "row", height: 80, elevation: 2, backgroundColor: '#283e4a' },
+  container: { flexDirection: "row", height: 80, elevation: 2, backgroundColor: '#1973b1' },
   tabButton: { flex: 1, justifyContent: "center", alignItems: "center" },
-  tabText: { color: '#c7d1d8' }
 });
 
 const TabBar = props => {
@@ -21,6 +20,7 @@ const TabBar = props => {
   } = props;
 
   const { routes, index: activeRouteIndex } = navigation.state;
+
   return (
     <View style={S.container}>
       {routes.map((route, routeIndex) => {

@@ -1,24 +1,51 @@
 import React from 'react';
+import { Text } from 'galio-framework';
+import { FlatList, StyleSheet, View } from 'react-native';
 
-import { View } from 'react-native';
-import { Text, Button } from 'galio-framework'
-import { theme, withGalio, GalioProvider } from 'galio-framework'
-import { Card } from 'galio-framework';
-import Icon from 'react-native-vector-icons/Ionicons';
+import HeaderTitle from "./../components/HeaderTitle";
+
+const S = StyleSheet.create({
+  container: {
+    flex: 1,
+    paddingTop: 22
+  },
+  item: {
+    padding: 10,
+    fontSize: 18,
+    height: 44,
+  },
+});
 
 class HomeScreen extends React.Component {
   render() {
     return (
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        <Text p muted >Home Screen</Text>
-        <Button
-          color="success"
-          icon="checkmark-circle"
-          onPress={() => this.props.navigation.navigate('Profile')}
-        >
-          Go to Details
-          </Button>
-          <Icon name="ios-apps" size={30} color="#4F8EF7" />
+      <View style={S.container}>
+        <HeaderTitle title="Home" />
+        <FlatList
+          data={[
+            { key: 'Devin' },
+            { key: 'Dan' },
+            { key: 'Dominic' },
+            { key: 'Jackson' },
+            { key: 'James' },
+            { key: 'Joel' },
+            { key: 'John' },
+            { key: 'Jillian' },
+            { key: 'Jimmy' },
+            { key: 'Julie' },
+            { key: 'Julie1' },
+            { key: 'Julie2' },
+            { key: 'Julie43' },
+            { key: 'Julie4' },
+            { key: 'Julie5' },
+            { key: 'Julie6' },
+            { key: 'Julie7' },
+            { key: 'Julie8' },
+            { key: 'Julie9' },
+            { key: 'Julie0' },
+          ]}
+          renderItem={({ item }) => <Text style={S.item}>{item.key}</Text>}
+        />
       </View>
     );
   }

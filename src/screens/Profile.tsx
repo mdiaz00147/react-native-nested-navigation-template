@@ -1,20 +1,26 @@
 import React from 'react';
+import { StyleSheet, View } from 'react-native';
+import { Text } from 'galio-framework'
 
-import { View } from 'react-native';
-import { Text, Button } from 'galio-framework'
-import { theme, withGalio, GalioProvider } from 'galio-framework'
-import { Card } from 'galio-framework';
+import HeaderTitle from "./../components/HeaderTitle";
+
+const S = StyleSheet.create({
+  container: {
+    flex: 1,
+    paddingTop: 22
+  }
+});
 
 
-
-class DetailsScreen extends React.Component {
+class ProfileScreen extends React.Component {
   render() {
     return (
-      <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        <Text h1 italic>Ariana Careta</Text>
+      <View style={S.container}>
+        <HeaderTitle title="Profile" />
+        <Text onPress={() => this.props.navigation.navigate('Screen1')} h1 italic>Ariana Careta</Text>
       </View>
     );
   }
 }
 
-export default DetailsScreen;
+export default ProfileScreen;
