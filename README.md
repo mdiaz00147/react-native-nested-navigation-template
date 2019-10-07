@@ -25,5 +25,8 @@ expo start
 
 ## Screens demo
 
-![alt text](https://raw.githubusercontent.com/mdiaz00147/react-native-nested-navigation-template/master/src/assets/screens/loginScreen.png) | ![alt text](https://raw.githubusercontent.com/mdiaz00147/react-native-nested-navigation-template/master/src/assets/screens/uploadScreen.png)
+
+| Login     | Demo screen |
+| ---      | ---       |
+| ![alt text](https://raw.githubusercontent.com/mdiaz00147/react-native-nested-navigation-template/master/src/assets/screens/loginScreen.png) | ![alt text](https://raw.githubusercontent.com/mdiaz00147/react-native-nested-navigation-template/master/src/assets/screens/uploadScreen.png) |
 
