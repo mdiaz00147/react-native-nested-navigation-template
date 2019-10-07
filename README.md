@@ -21,3 +21,8 @@ yarn
 
 ```bash
 expo start
+
+
+## Screens demo
+
+<img src="https://raw.githubusercontent.com/mdiaz00147/react-native-nested-navigation-template/tree/master/src/assets/screens/loginScreen.png?sanitize=true&raw=true" width="250"> |  <img src="https://raw.githubusercontent.com/mdiaz00147/react-native-nested-navigation-template/tree/master/src/assets/screens/loginScreen.png?sanitize=true&raw=true" width="250"> |
