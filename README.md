@@ -21,7 +21,7 @@ yarn
 
 ```bash
 expo start
-
+```
 
 ## Screens demo
 
