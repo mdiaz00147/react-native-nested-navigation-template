@@ -13,6 +13,13 @@
       "android",
       "web"
     ],
-    "description": ""
+    "description": "This is a react native app to store my private daily needed pics, such as my credit card photos or blockchain private keys.",
+    "ios": {
+      "bundleIdentifier": "com.shinesoft.minepic"
+    },
+    "android": {
+      "package": "com.shinesoft.minepic"
+    },
+    "githubUrl": "https://github.com/mdiaz00147/MinePics"
   }
 }

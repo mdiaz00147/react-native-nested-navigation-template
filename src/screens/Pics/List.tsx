@@ -3,7 +3,7 @@ import { StyleSheet, View } from 'react-native';
 import { Text } from 'galio-framework'
 import { widthPercentageToDP as wp, heightPercentageToDP as hp } from 'react-native-responsive-screen';
 
-import HeaderTitle from "./../components/HeaderTitle";
+import HeaderTitle from "./../../components/HeaderTitle";
 
 const S = StyleSheet.create({
   container: {
@@ -19,15 +19,15 @@ const S = StyleSheet.create({
 });
 
 
-class ProfileScreen extends React.Component {
+class PicsListScreen extends React.Component {
   render() {
     return (
       <View style={S.container}>
-        <HeaderTitle title="Profile" />
-        <View style={S.content}><Text h5 italic>Profile Screen</Text></View>
+        <HeaderTitle title="Pictures" />
+        <View style={S.content}><Text h5 italic>Pictures Screen</Text></View>
       </View>
     );
   }
 }
 
-export default ProfileScreen;
+export default PicsListScreen;

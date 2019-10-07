@@ -1,13 +1,15 @@
 import React from "react";
 
 import Screen from "./Screen";
-import Home from "./Home"
+
+import PicsList from "./Pics/List"
+import Upload from "./Upload"
 import Profile from "./Profile"
 import Login from "./Auth/Login"
 
 // App navigation
-export const HomeScreen = () => (<Screen name="Home" ><Home/></Screen>);
-export const PicsScreen = () => (<Screen name="Pics" ><Home/></Screen>);
+export const PicsListScreen = () => (<Screen name="Home" ><PicsList/></Screen>);
+export const UploadScreen = () => (<Screen name="Pics" ><Upload/></Screen>);
 export const ProfileScreen = ({ navigation }) => (<Screen  name="Profile" ><Profile navigation={navigation}/></Screen>);
 
 // Auth navigation

@@ -2,6 +2,7 @@ import React from 'react';
 import { StyleSheet, View, TouchableHighlight, Image } from 'react-native';
 import { Text } from 'galio-framework'
 import { Input, Block } from 'galio-framework';
+import {widthPercentageToDP as wp, heightPercentageToDP as hp} from 'react-native-responsive-screen';
 
 const S = StyleSheet.create({
   primaryTextColor: { color: '#1973b1' },
@@ -12,30 +13,30 @@ const S = StyleSheet.create({
     justifyContent: 'space-between'
   },
   headerLogo: {
-    marginTop:200,
+    marginTop:hp('10%'),
     width: 50, 
     height: 50
   },
   input: {
-    width: 350
+    width: wp('85%'),
   },
   loginButton: {
-    width: 350,
+    width: wp('85%'),
     marginTop: 10,
     borderWidth: 1,
     borderColor: '#1973b1',
-    height: 35,
+    height: hp('5%'),
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
     borderRadius: 5
   },
   footerContainer:{
-    width: '95%',
+    width: wp('95%'),
     borderColor: '#c7d1d8',
     borderTopWidth: 1,
     padding: 15,
-    paddingTop: 20,
+    paddingTop: hp('2%'),
   },
   footerLinks:{
     textDecorationLine:'underline'
@@ -44,16 +45,16 @@ const S = StyleSheet.create({
 
 
 class LoginScreen extends React.Component {
+
   render() {
-    console.warn(this.props.navigation)
     return (
       <View style={S.container}>
         <Image style={S.headerLogo} source={{ uri: 'https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png' }} />
         <Block>
           <Input style={S.input} borderless topHelp={false} placeholder="Email" />
-          <Input borderless viewPass placeholder="Password" password />
+          <Input style={S.input} borderless viewPass placeholder="Password" password />
 
-          <TouchableHighlight style={S.loginButton}   onPress={() => this.props.navigation.navigate('HomeScreen')} underlayColor={'transparent'}>
+          <TouchableHighlight style={S.loginButton}   onPress={() => this.props.navigation.navigate('UploadScreen')} underlayColor={'transparent'}>
             <Text style={S.primaryTextColor} >Login</Text>
           </TouchableHighlight>
         </Block>

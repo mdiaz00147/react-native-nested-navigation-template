@@ -19,15 +19,15 @@ const S = StyleSheet.create({
 });
 
 
-class ProfileScreen extends React.Component {
+class UploadScreen extends React.Component {
   render() {
     return (
       <View style={S.container}>
-        <HeaderTitle title="Profile" />
-        <View style={S.content}><Text h5 italic>Profile Screen</Text></View>
+        <HeaderTitle title="Upload" />
+        <View style={S.content}><Text h5 italic>Upload Screen</Text></View>
       </View>
     );
   }
 }
 
-export default ProfileScreen;
+export default UploadScreen;

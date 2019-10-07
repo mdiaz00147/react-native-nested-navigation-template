@@ -6,8 +6,8 @@ import Icon from 'react-native-vector-icons/Ionicons';
 import { TabBar } from "../components";
 
 import {
-  HomeScreen,
-  PicsScreen,
+  PicsListScreen,
+  UploadScreen,
   ProfileScreen,
   LoginScreen
 } from "../screens";
@@ -15,16 +15,16 @@ import {
 
 const Tabs = createBottomTabNavigator(
   {
-    HomeScreen: {
-      screen: HomeScreen,
+    PicsListScreen: {
+      screen: PicsListScreen,
       navigationOptions: {
         tabBarIcon: ({ tintColor }) => <Icon name="md-flask" size={30} color={tintColor} />,
       },
     },
-    PicsScreen: {
-      screen: PicsScreen,
+    UploadScreen: {
+      screen: UploadScreen,
       navigationOptions: {
-        tabBarIcon: ({ tintColor }) => <Icon name="md-planet" size={30} color={tintColor} />
+        tabBarIcon: ({ tintColor }) => <Icon name="ios-cloud-upload" size={30} color={tintColor} />
       }
     },
     ProfileScreen: {
@@ -41,7 +41,6 @@ const Tabs = createBottomTabNavigator(
       inactiveTintColor: "#c7d1d8"
     }
   },
-  { headerMode: "none" }
 );
 
 const Stack = createStackNavigator(
@@ -59,6 +58,5 @@ const Stack = createStackNavigator(
     headerMode: 'none',
   }
 );
-
 
 export default createAppContainer(Stack);
